@@ -1,0 +1,20 @@
+---
+import MetaTags from '@/components/MetaTags.astro'
+
+const {
+  title = '¡Únete a la Comunidad Punto&Coma en Discord y Potencia Tu Carrera en IT!',
+  description = 'En el dinámico mundo de la tecnología, dar el primer paso en tu carrera IT puede ser desafiante. Reconociendo esta barrera, he creado Punto&Coma, una comunidad en Discord dedicada a fomentar el aprendizaje colaborativo y la experiencia práctica a través del desarrollo de proyectos open source.',
+  img = Astro.url,
+  url = Astro.url
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <MetaTags {...{ title, description, img, url }} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
