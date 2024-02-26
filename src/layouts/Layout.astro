@@ -1,6 +1,7 @@
 ---
 import MetaTags from '@/components/MetaTags.astro'
 import '@fontsource/sora'
+import Footer from '@/components/Footer.astro'
 import Navbar from '@/components/Navbar.astro'
 
 const {
@@ -16,9 +17,10 @@ const {
   <head>
     <MetaTags {...{ title, description, img, url }} />
   </head>
-
+  
   <body class="font-serif bg-black">
     <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
