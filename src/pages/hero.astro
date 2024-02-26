@@ -1,0 +1,20 @@
+---
+
+import Button from '@/components/Button.astro'
+
+---
+
+<section class="h-screen flex items-center justify-center bg-gradient-to-b from-violet/30 to-black ">
+    <div class="-z-10 fixed flex w-full justify-between ">
+        <img src="./hero.svg" />
+        <img src="./hero.svg" class="-scale-x-100 lg:block md:block hidden" />
+    </div>
+    <div class="flex flex-col items-center text-center">
+        <span class="text-white xl:text-lg md:text-base text-sm">Aprende haciendo. Crea conociendo.</span>
+        <h2 class="xl:text-5xl md:text-4xl text-xl text-white mt-8 mb-4">Más que un código, creamos</h2>
+        <h3 class="xl:text-6xl md:text-5xl text-2xl text-violet font-bold mb-8">conexiones significativas</h3>
+        <span class="xl:text-lg text-base text-white mb-8 px-4">En Punto&Coma somos personas del mundo it, trabajando en conjunto para proyectos open source.</span>
+        
+        <Button url="https://discord.gg/92E4Xauv" text="Unite a la comunidad" icon="./discord.svg" filled="bg-violet"><Button>
+    </div>
+</section>

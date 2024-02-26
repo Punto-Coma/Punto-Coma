@@ -1,6 +1,7 @@
 ---
 import MetaTags from '@/components/MetaTags.astro'
 import '@fontsource/sora'
+import Navbar from '@/components/Navbar.astro'
 
 const {
   title = '¡Únete a la Comunidad Punto&Coma en Discord y Potencia Tu Carrera en IT!',
@@ -15,7 +16,9 @@ const {
   <head>
     <MetaTags {...{ title, description, img, url }} />
   </head>
-  <body class="font-serif">
+
+  <body class="font-serif bg-black">
+    <Navbar />
     <slot />
   </body>
 </html>
