@@ -3,6 +3,7 @@ import MetaTags from '@/components/MetaTags.astro'
 import '@fontsource/sora'
 import Footer from '@/components/Footer.astro'
 import Navbar from '@/components/Navbar.astro'
+import Cards from '@/components/Cards.astro'
 
 const {
   title = '¡Únete a la Comunidad Punto&Coma en Discord y Potencia Tu Carrera en IT!',
@@ -20,6 +21,7 @@ const {
   
   <body class="font-serif bg-black">
     <Navbar />
+    <Cards/>
     <slot />
     <Footer />
   </body>
