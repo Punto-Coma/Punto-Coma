@@ -8,7 +8,10 @@ export default {
       colors: {
         violet: '#ae81e9',
         white: '#ffffff',
-        black: '#1E1E1E'
+        black: {
+          DEFAULT: '#1e1e1e',
+          dark: '#0E0E0E'
+        }
       }
     },
     fontFamily: {
