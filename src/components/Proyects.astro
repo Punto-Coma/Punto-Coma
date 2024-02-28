@@ -1,0 +1,165 @@
+---
+const proyectos = {
+  proyecto1: {
+    titulo: 'Proyecto 1',
+    texto:
+      'Un poco de descripción del proyecto en cuestión. Con tal y cúal lenguaje.'
+  },
+  proyecto2: {
+    titulo: 'Otro Proyecto',
+    texto: 'Descripción corta de este proyecto'
+  },
+  proyecto3: {
+    titulo: 'Otro Proyecto',
+    texto: ' Descripción corta de este proyecto'
+  },
+  proyecto4: {
+    titulo: 'Proyecto 4',
+    texto:
+      'Un poco de descripción del proyecto en cuestión. Con tal y cúal lenguaje.'
+  },
+  proyecto5: {
+    titulo: 'Otro Proyecto',
+    texto: 'Descripción corta de este proyecto'
+  },
+  proyecto6: {
+    titulo: 'Otro Proyecto',
+    texto: 'Descripción corta de este proyecto'
+  }
+}
+---
+
+<div class="flex w-[100%] items-center justify-center">
+  <div
+    class="flex min-h-[738px] w-[100%] flex-row flex-wrap justify-center gap-6 p-6 xl:grid xl:w-[1275px] xl:grid-cols-4 xl:grid-rows-3"
+  >
+    <!--  -->
+
+    <div
+      class="row-start-1 row-end-3 flex w-[310px] flex-col flex-wrap justify-between gap-3 rounded-2xl border-[1px] border-[#AE81E9] bg-gradient-to-b from-[#181818] to-[#181818] p-3 xl:w-[100%]"
+    >
+      <img
+        class="h-[230px] w-[272px] rounded-lg"
+        src="public/proyect-1.png"
+        alt="proyect image"
+      />
+
+      <h2 class="text-3xl font-bold text-white">
+        {proyectos.proyecto1.titulo}
+      </h2>
+
+      <p class="max-w-[242px] text-[16px] text-white">
+        {proyectos.proyecto1.texto}
+      </p>
+
+      <button
+        class="rounded-3xl bg-[#AE81E9] px-4 py-2.5 font-bold text-[#181818]"
+      >
+        Visitar
+      </button>
+    </div>
+    <!--  -->
+    <div
+      class="flex w-[310px] flex-col flex-wrap gap-3 rounded-2xl border-[1px] border-[#FFFFFF4D] bg-gradient-to-b from-[#0E0E0E] to-[#181818] p-3 xl:w-[100%]"
+    >
+      <img class="h-[32px] w-[32px]" src="public/diversity_3.svg" alt="" />
+
+      <h2 class="text-xl font-bold text-white">
+        {proyectos.proyecto2.titulo}
+      </h2>
+
+      <p class="max-w-[242px] text-[16px] leading-5 text-white">
+        {proyectos.proyecto2.texto}
+      </p>
+    </div>
+    <!--  -->
+    <div
+      class="col-span-2 flex w-[310px] flex-wrap items-center gap-6 rounded-2xl border-[1px] border-[#FFFFFF4D] bg-gradient-to-b from-[#0E0E0E] to-[#181818] p-4 xl:w-[100%]"
+    >
+      <img
+        class="h-[180px] w-[213px] rounded-lg"
+        src="public/proyect-1.png"
+        alt="proyect image"
+      />
+
+      <div class="flex flex-col flex-wrap gap-4">
+        <img class="h-[32px] w-[32px]" src="public/diversity_3.svg" alt="" />
+
+        <h2 class="text-xl font-bold text-white">
+          {proyectos.proyecto3.titulo}
+        </h2>
+
+        <p class="w-[242px] text-[16px] leading-5 text-white">
+          {proyectos.proyecto3.texto}
+        </p>
+      </div>
+    </div>
+
+    <!--  -->
+    <div
+      class="col-span-2 flex w-[310px] flex-wrap items-center justify-center rounded-2xl border-[1px] border-[#FFFFFF4D] bg-[radial-gradient(34.32%_423.01%_at_34.62%_0%,#ae81e9_0%,#181818_38%)] p-4 text-3xl font-bold text-white xl:w-[100%]"
+    >
+      Nuestros proyectos
+    </div>
+    <!--  -->
+    <div
+      class="row-span-2 flex flex-col flex-wrap justify-between gap-3 rounded-2xl border-[1px] border-[#AE81E9] bg-gradient-to-b from-[#AE81E9] to-[#181818] p-3"
+    >
+      <img
+        class="h-[230px] w-[272px] rounded-lg"
+        src="public/proyect-1.png"
+        alt="proyect image"
+      />
+
+      <h2 class="text-3xl font-bold text-white">
+        {proyectos.proyecto4.titulo}
+      </h2>
+
+      <p class="w-[242px] text-[16px] text-white">
+        {proyectos.proyecto4.texto}
+      </p>
+
+      <button
+        class="rounded-3xl bg-[#AE81E9] px-4 py-2.5 font-bold text-[#181818]"
+      >
+        Visitar
+      </button>
+    </div>
+    <!--  -->
+    <div
+      class="col-span-2 flex w-[310px] flex-wrap items-center gap-6 rounded-2xl border-[1px] border-[#FFFFFF4D] bg-[linear-gradient(100.3deg,_#AE81E9_1.34%,_#181818_60.54%)] p-4 xl:w-[100%]"
+    >
+      <img
+        class="h-[180px] w-[213px] rounded-lg"
+        src="public/proyect-1.png"
+        alt="proyect image"
+      />
+
+      <div class="flex flex-col gap-4">
+        <img class="h-[32px] w-[32px]" src="public/diversity_3.svg" alt="" />
+
+        <h2 class="text-xl font-bold text-white">
+          {proyectos.proyecto5.titulo}
+        </h2>
+
+        <p class="w-[242px] text-[16px] leading-5 text-white">
+          {proyectos.proyecto5.texto}
+        </p>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="flex w-[310px] flex-col gap-3 rounded-2xl border-[1px] border-[#FFFFFF4D] bg-gradient-to-b from-[#0E0E0E] to-[#181818] p-3 xl:w-[100%]"
+    >
+      <img class="h-[32px] w-[32px]" src="public/diversity_3.svg" alt="" />
+
+      <h2 class="text-xl font-bold text-white">
+        {proyectos.proyecto6.texto}
+      </h2>
+
+      <p class="w-[242px] text-[16px] leading-5 text-white">
+        {proyectos.proyecto6.texto}
+      </p>
+    </div>
+  </div>
+</div>
