@@ -1,10 +1,9 @@
 ---
 import MetaTags from '@/components/MetaTags.astro'
 import '@fontsource/sora'
-import '@fontsource-variable/space-grotesk'
-import '@fontsource/kanit'
 import Cards from '@/components/Cards.astro'
 import About from '@/components/About.astro'
+import Proyects from '@/components/Proyects.astro'
 
 const {
   title = '¡Únete a la Comunidad Punto&Coma en Discord y Potencia Tu Carrera en IT!',
@@ -19,9 +18,10 @@ const {
   <head>
     <MetaTags {...{ title, description, img, url }} />
   </head>
-  <body class="font-serif bg-black">
-    <About/>
-    <Cards/>
+  <body class="bg-black font-serif">
+    <About />
+    <Cards />
+    <Proyects />
     <slot />
   </body>
 </html>
