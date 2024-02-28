@@ -7,8 +7,14 @@ export default {
     extend: {
       colors: {
         violet: '#ae81e9',
-        white: '#ffffff',
-        black: '#0e0e0e'
+        white: {
+          DEFAULT: '#ffffff',
+          100: '#d9d9d9'
+        },
+        black: {
+          DEFAULT: '#1e1e1e',
+          dark: '#0E0E0E'
+        }
       },
       fontSize: {
         xs: ['12px', '16px'],
@@ -20,6 +26,9 @@ export default {
         '3xl': ['30px', '36px'],
         '4xl': ['36px', '40px'],
         '5xl': ['48px', '100px']
+      },
+      borderRadius: {
+        '4xl': '30px'
       }
     },
     fontFamily: {
