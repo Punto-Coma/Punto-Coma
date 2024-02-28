@@ -1,0 +1,17 @@
+---
+
+const {
+    url,
+    text,
+    icon,
+    filled
+} = Astro.props
+
+---
+
+<a href={ url } target="_blank" class:list={["flex justify-center items-center w-fit gap-2 xl:px-6 px-3 py-3 border border-violet rounded-3xl transition-all", filled && "bg-violet hover:bg-violet hover:brightness-75" || "hover:bg-black hover:text-white"]}>
+    {icon &&
+        <img src={ icon } class="w-6 h-auto"/>
+    }
+    <span class:list={["xl:text-lg md:text-base sm:text-sm", filled && "text-black" || "text-violet"]}>{ text }</span>
+</a>
