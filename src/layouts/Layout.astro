@@ -30,9 +30,15 @@ const {
     <Navbar />
     <slot />
 
-    <div class="flex h-screen flex-col justify-evenly">
-      <FAQ class="mx-auto w-11/12" />
+    <div class="flex min-h-screen flex-col justify-evenly">
+      <FAQ class="mx-auto w-11/12 py-8" />
       <Footer />
     </div>
+    <style is:global>
+      /* If you won't text to be violet instead use bold tag (<b>) */
+      strong {
+        @apply text-violet;
+      }
+    </style>
   </body>
 </html>
