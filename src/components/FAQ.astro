@@ -1,48 +1,24 @@
 ---
+import { frontmatter } from '../docs/FAQ.md';
+const { title, faqs } = frontmatter
+
 interface Props {
   class?: string
 }
-
-interface FAQ {
-  question: string
-  answer: string | string[]
-}
-
-// TODO: Add more questions and answers
-const content: FAQ[] = [
-  {
-    question: '¿Qué es un FAQ?',
-    answer:
-      'FAQ es la sigla de Frequently Asked Questions, que en español significa Preguntas Frecuentes. Es una sección de un sitio web donde se recopilan y responden las preguntas más comunes que los usuarios tienen sobre un tema o servicio.'
-  },
-  {
-    question: '¿Qué es un FAQ?',
-    answer: [
-      'FAQ es la sigla de Frequently Asked Questions, que en español significa Preguntas Frecuentes. Es una sección de un sitio web donde se recopilan y responden las preguntas más comunes que los usuarios tienen sobre un tema o servicio.',
-
-      'FAQ es la sigla de Frequently Asked Questions, que en español significa Preguntas Frecuentes. Es una sección de un sitio web donde se recopilan y responden las preguntas más comunes que los usuarios tienen sobre un tema o servicio.'
-    ]
-  },
-  {
-    question: '¿Qué es un FAQ?',
-    answer:
-      'FAQ es la sigla de Frequently Asked Questions, que en español significa Preguntas Frecuentes. Es una sección de un sitio web donde se recopilan y responden las preguntas más comunes que los usuarios tienen sobre un tema o servicio.'
-  }
-]
 ---
 
 <section class:list={['max-w-2xl', Astro.props.class as Props]}>
   <h2
     class="mb-4 text-2xl font-semibold text-white md:mb-8 md:text-center md:text-4xl"
   >
-    FAQ - Preguntas frecuentes
+    {title}
   </h2>
   <ul class="flex flex-col">
     {
-      content.map(({ question, answer }, i) => (
+      faqs.map(({ answer, question }, i: number) => (
         <li class="accordion group relative my-2 rounded-md bg-black text-gray-300 shadow-lg transition-colors duration-300 ease-in">
           <button
-            class="accordion-button sm:px-4' flex w-full items-center justify-between gap-2 p-3 transition hover:text-white"
+            class="accordion-button flex w-full items-center justify-between gap-6 text-pretty p-3 text-left transition hover:text-white sm:px-4"
             type="button"
             id={`accordion-${i}-button`}
             aria-expanded="false"
@@ -51,7 +27,7 @@ const content: FAQ[] = [
             {question}
 
             <svg
-              class="chevron size-6 transform fill-violet transition-transform duration-500"
+              class="chevron size-6 shrink-0 transform fill-violet transition-transform duration-500"
               viewBox="0 0 20 20"
             >
               <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10" />
@@ -64,10 +40,8 @@ const content: FAQ[] = [
             class="accordion-content max-h-0 overflow-hidden border-l-2 border-violet px-3 transition-all duration-500 ease-in-out sm:px-4"
           >
             <p
-              class="prose mb-4 mt-1 max-w-full transition-[height]"
-              set:html={
-                Array.isArray(answer) ? answer.join(`<br> <br>`) : answer
-              }
+              class="mb-4 mt-1 text-pretty transition-[height]"
+              set:html={answer}
             />
           </div>
         </li>
