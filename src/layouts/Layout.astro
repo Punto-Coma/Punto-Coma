@@ -3,7 +3,6 @@ import MetaTags from '@/components/MetaTags.astro'
 import '@fontsource/sora'
 import Footer from '@/components/Footer.astro'
 import Navbar from '@/components/Navbar.astro'
-import FAQ from '@/components/FAQ.astro'
 
 const {
   title = '¡Únete a la Comunidad Punto&Coma en Discord y Potencia Tu Carrera en IT!',
@@ -20,7 +19,7 @@ const {
   </head>
 
   <body
-    class="bg-black-dark min-h-screen bg-gradient-to-b from-violet/20 to-violet/0 font-serif"
+    class="min-h-screen bg-black-dark bg-gradient-to-b from-violet/20 to-violet/0 font-serif"
   >
     <div class="absolute -z-10 flex w-full justify-between">
       <img src="./hero.svg" />
@@ -31,7 +30,6 @@ const {
     <slot />
 
     <div class="flex h-screen flex-col justify-evenly">
-      <FAQ class="mx-auto w-11/12" />
       <Footer />
     </div>
   </body>
