@@ -1,0 +1,16 @@
+---
+import { Marquee } from "@devnomic/marquee";
+import UserCard from "@/components/UserCard.astro";
+import "@devnomic/marquee/dist/index.css";
+
+const { reverse, users } = Astro.props;
+---
+
+  <Marquee fade={true} reverse={ reverse } className="my-6 [--duration:300s] gap-4 " innerClassName=" gap-4">
+    {
+      users.map( (user) => (
+        <UserCard img={ user.avatar } username={user.nickname || user.username} />
+      ) )
+    }
+  </Marquee>
+

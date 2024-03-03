@@ -1,8 +1,10 @@
 ---
-import MetaTags from '@/components/MetaTags.astro'
 import '@fontsource/sora'
+import MetaTags from '@/components/MetaTags.astro'
 import Footer from '@/components/Footer.astro'
 import Navbar from '@/components/Navbar.astro'
+import Users from '@/components/Users.astro'
+import FAQ from '@/components/FAQ.astro'
 
 const {
   title = '¡Únete a la Comunidad Punto&Coma en Discord y Potencia Tu Carrera en IT!',
@@ -29,8 +31,15 @@ const {
     <Navbar />
     <slot />
 
-    <div class="flex h-screen flex-col justify-evenly">
+    <div class="flex min-h-screen flex-col justify-evenly">
+      <FAQ class="mx-auto w-11/12 py-8" />
       <Footer />
     </div>
+    <style is:global>
+      /* If you won't text to be violet instead use bold tag (<b>) */
+      strong {
+        @apply text-violet;
+      }
+    </style>
   </body>
 </html>
