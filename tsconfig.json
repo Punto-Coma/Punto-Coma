@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "D:/Usuario/Documents/Gianni-puntocoma/Punto-Coma",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
