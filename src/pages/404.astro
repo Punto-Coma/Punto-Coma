@@ -1,0 +1,20 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Button from '@/components/Button.astro'
+---
+
+<Layout title="404 Not Found" description="Punto&Coma, pagina no encontrada">
+  <section class="flex h-screen items-center justify-center">
+    <div class="flex flex-col items-center text-center">
+      <span class="text-sm text-white md:text-base xl:text-lg">Error 404</span>
+      <h2 class="mb-4 mt-8 text-xl text-white md:text-4xl xl:text-5xl">
+        Página no encontrada
+      </h2>
+      <h3 class="mb-8 text-2xl font-bold text-violet md:text-5xl xl:text-6xl">
+        ¡Ups!
+      </h3>
+
+      <Button url="/" text="Ir al inicio" filled="bg-violet" />
+    </div>
+  </section>
+</Layout>
