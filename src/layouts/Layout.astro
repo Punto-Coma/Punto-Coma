@@ -3,6 +3,7 @@ import MetaTags from '@/components/MetaTags.astro'
 import '@fontsource/sora'
 import Footer from '@/components/Footer.astro'
 import Navbar from '@/components/Navbar.astro'
+import Users from '@/components/Users.astro'
 import FAQ from '@/components/FAQ.astro'
 
 const {
@@ -31,8 +32,9 @@ const {
     <slot />
 
     <div class="flex h-screen flex-col justify-evenly">
+      <Users />
       <FAQ class="mx-auto w-11/12" />
-      <Footer />
     </div>
+    <Footer />
   </body>
 </html>

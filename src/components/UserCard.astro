@@ -1,0 +1,8 @@
+---
+const { img, username } = Astro.props;
+---
+
+<div class="flex flex-row gap-4 items-center justify-center border border-white rounded-2xl py-2 px-4 w-48">
+    <img src={img} alt="username-pfp" class="w-8">
+    <span class="text-white font-bold">{ username }</span>
+</div>
