@@ -33,6 +33,9 @@ export default {
     },
     fontFamily: {
       serif: ['Sora', defaultTheme.fontFamily.serif]
+    },
+    dropShadow:{
+      'violet': '0 0 20px #ae81e9'
     }
   },
   plugins: []
