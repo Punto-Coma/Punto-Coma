@@ -1,15 +1,43 @@
 ---
-
 import Button from '@/components/Button.astro'
 
+interface Props {
+  class?: string
+}
 ---
 
-<header class="fixed z-10 w-screen py-4 backdrop-blur-sm">
-    <nav class="flex flex-row justify-around items-center">
-        <img src="./favicon.svg" alt="logo" class="xl:w-16 md:w-12 sm:w-10"/>
-        <div class="flex gap-4">
-            <Button url="https://github.com/Punto-Coma" text="Colaborá" icon="./github.svg"></Button>
-            <Button url="https://discord.gg/92E4Xauv" text="Unite" icon="./discord.svg" filled="bg-violet"><Button>
-        </div>
-    </nav>
+<header
+  class:list={['fixed z-50 w-full py-4 backdrop-blur-sm', Astro.props.class]}
+>
+  <nav
+    class="mx-auto flex w-11/12 max-w-screen-lg flex-row items-center justify-between gap-x-2"
+  >
+    <img
+      src="./favicon.svg"
+      class="aspect-square lg:w-14"
+      alt="Logo de Punto y Coma"
+      height="48px"
+      width="48px"
+    />
+
+    <div class="flex gap-x-3">
+      <Button
+        aria-label="Colabora en GitHub con Punto y Coma"
+        href="https://github.com/Punto-Coma"
+        class="btn-secondary"
+        icon="./github.svg"
+      >
+        Colabora
+      </Button>
+
+      <Button
+        aria-label="Unite a la comunidad de Punto y Coma"
+        class="btn-primary"
+        href="https://discord.gg/92E4Xauv"
+        icon="./discord.svg"
+      >
+        Unite
+      </Button>
+    </div>
+  </nav>
 </header>
