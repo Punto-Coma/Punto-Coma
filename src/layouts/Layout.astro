@@ -21,9 +21,9 @@ const {
   </head>
 
   <body
-    class="min-h-screen bg-black-dark bg-gradient-to-b from-violet/20 to-violet/0 font-serif"
+    class="flex min-h-screen flex-col gap-20 bg-black-dark bg-gradient-to-b from-violet/20 to-violet/0 font-serif md:gap-40"
   >
-    <div class="absolute -z-10 flex w-full justify-between">
+    <div class="fixed -z-10 flex w-full justify-between">
       <img src="./hero.svg" />
       <img src="./hero.svg" class="hidden -scale-x-100 md:block lg:block" />
     </div>
@@ -31,10 +31,8 @@ const {
     <Navbar />
     <slot />
 
-    <div class="flex min-h-screen flex-col justify-evenly">
-      <FAQ class="mx-auto w-11/12 py-8" />
-      <Footer />
-    </div>
+    <Footer />
+
     <style is:global>
       /* If you won't text to be violet instead use bold tag (<b>) */
       strong {
