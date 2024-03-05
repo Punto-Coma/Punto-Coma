@@ -7,7 +7,10 @@ interface Props {
 ---
 
 <header
-  class:list={['fixed z-50 w-full py-4 backdrop-blur-sm', Astro.props.class]}
+  class:list={[
+    'sticky top-0 z-50 w-full py-4 backdrop-blur-sm',
+    Astro.props.class
+  ]}
 >
   <nav
     class="mx-auto flex w-11/12 max-w-screen-lg flex-row items-center justify-between gap-x-2"

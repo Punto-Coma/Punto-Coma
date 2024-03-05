@@ -1,5 +1,5 @@
 ---
-import { frontmatter } from '../docs/FAQ.md';
+import { frontmatter } from '../docs/FAQ.md'
 const { title, faqs } = frontmatter
 
 interface Props {
@@ -15,11 +15,13 @@ interface FAQ {
 const content: FAQ[] = [
   {
     question: '¿Qué es Punto&Coma?',
-    answer: 'Punto&Coma es una <strong>comunidad de desarrolladores</strong> dedicada a trabajar en <strong>proyectos open source</strong>, con el objetivo de contribuir y beneficiar a la comunidad en general.'
+    answer:
+      'Punto&Coma es una <strong>comunidad de desarrolladores</strong> dedicada a trabajar en <strong>proyectos open source</strong>, con el objetivo de contribuir y beneficiar a la comunidad en general.'
   },
   {
     question: '¿Qué tipo de proyectos se desarrollan?',
-    answer: 'Nos enfocamos en proyectos de <strong>código abierto</strong> que cubren diversas áreas, desde el <strong>desarrollo software</strong> hasta <strong>herramientas y recursos</strong> para la comunidad de desarrolladores. Siempre estamos abiertos a nuevas ideas y colaboradores.'
+    answer:
+      'Nos enfocamos en proyectos de <strong>código abierto</strong> que cubren diversas áreas, desde el <strong>desarrollo software</strong> hasta <strong>herramientas y recursos</strong> para la comunidad de desarrolladores. Siempre estamos abiertos a nuevas ideas y colaboradores.'
   },
   {
     question: '¿Cómo puedo contribuir en los proyectos?',
@@ -38,9 +40,9 @@ const content: FAQ[] = [
 ]
 ---
 
-<section class:list={['max-w-2xl', Astro.props.class as Props]}>
+<section class="mx-auto w-11/12 max-w-2xl">
   <h2
-    class="mb-4 text-2xl font-semibold text-white md:mb-8 md:text-center md:text-4xl"
+    class="mb-4 text-center text-2xl font-semibold text-white md:mb-8 md:text-4xl"
   >
     {title}
   </h2>
