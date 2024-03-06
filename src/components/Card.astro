@@ -1,20 +1,31 @@
 ---
-const { title, text, variant } = Astro.props
+interface Props {
+  title: string
+  text: string
+  class?: string
+}
+const { title, text } = Astro.props as Props
 ---
 
-<div
-  class=`card w-[100%] md:w-[320px] lg:w-[434px] min-h-[${variant === "1" ? '242px' : '312px'}] p-5 flex flex-col gap-3.5 rounded-2xl`
+<article
+  class:list={[
+    'flex max-w-md transform flex-col gap-3 rounded-2xl p-5 text-white',
+    Astro.props.class
+  ]}
 >
-  <img class="h-[32px] w-[32px]" src="/diversity_3.svg" alt="icon" />
+  <img
+    width="32px"
+    height="32px"
+    src="/diversity_3.svg"
+    alt="Icono de comunidad"
+  />
 
-  <h2 class="text-[20px] font-bold text-[#FFFFFF]">{title}</h2>
+  <h1 class="text-xl font-bold">{title}</h1>
 
-  <p
-    class="max-w-[368px] text-base font-normal leading-[20.42px] text-[#FFFFFF]"
-  >
+  <p class="max-w-prose text-sm leading-6">
     {text}
   </p>
-</div>
+</article>
 
 <style>
   .card {
