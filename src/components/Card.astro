@@ -1,21 +1,35 @@
 ---
-const { title, text, variant } = Astro.props;
+interface Props {
+  title: string
+  text: string
+  class?: string
+}
+const { title, text } = Astro.props as Props
 ---
 
+<article
+  class:list={[
+    'flex max-w-md transform flex-col gap-3 rounded-2xl p-5 text-white',
+    Astro.props.class
+  ]}
+>
+  <img
+    width="32px"
+    height="32px"
+    src="/diversity_3.svg"
+    alt="Icono de comunidad"
+  />
 
-<div class=`card w-[100%] md:w-[320px] lg:w-[434px] min-h-[${variant === "1" ? '242px' : '312px'}] p-5 flex flex-col gap-3.5 rounded-2xl`  >
+  <h1 class="text-xl font-bold">{title}</h1>
 
-    <img class="w-[32px] h-[32px]" src="public/diversity_3.svg" alt="icon">
-
-    <h2 class="font-bold text-[#FFFFFF] text-[20px]">{title}</h2>
-
-    <p class="font-normal text-[#FFFFFF] text-base leading-[20.42px] max-w-[368px]">{text}</p>
-
-</div>
+  <p class="max-w-prose text-sm leading-6">
+    {text}
+  </p>
+</article>
 
 <style>
-    
-.card{
-    background-image: linear-gradient(110deg, #0E0E0E, #181818, #AE81E9)
-}
+  article {
+    box-shadow: 0 1rem 2rem -1rem black;
+    background-image: linear-gradient(110deg, #0e0e0e, #181818, #ae81e9);
+  }
 </style>

@@ -1,60 +1,15 @@
 ---
 import Card from './Card.astro'
-
-const data = {
-    
-    titulo:"Nuestra base es...",
-
-    items:[
-    {
-        title:"Ambiente Fraterno",
-        text:"Un ambiente acogedor, solidario y sobretodo consciente para la socializacion de todos sus miembros, ya sea en busca de apoyo en algún proyecto, solución de problemas o una búsqueda para pasar el rato.",
-        variant:"1"
-    },
-    {
-        title:"Actividad Constante",
-        text:"Proponemos una comunidad activa la mayor parte del tiempo, siempre con algo que hacer cuando quieran hacerlo, por eso planeamos idear eventos para la comunidad.",
-        variant:"1"
-    },
-    {
-        title:"Creación de proyectos colectivos",
-        text:"Así como las misma comunidad, pensamos que algunos de los proyectos en Punto&Coma deberían ser comunitarios. Por eso planeamos idear lluvias de ideas sobre páginas aplicaciones o herramientas web o de cualquier ámbito qué juntos podamos crear para exponerlo al mundo y pocisionarnos como comunidad.",
-        variant:"2"
-    },
-    {
-        title:"Enseñanza voluntaria",
-        text:"Buscamos qué nuestros miembros más experimentados puedan guiar a los más novatos para así desarrollar las habilidades qué estamos seguros que cada uno posee. Por eso se fomenta y apoya la creación de contenidos para los más polifaceticos e interesados en divulgar información dentro y fuera de la comunidad.",
-        variant:"2"
-    },
-    ]
-}
-
+import { frontmatter } from '../docs/Card.md'
+const { hero, items } = frontmatter
 ---
 
+<section class="container mx-auto w-11/12 max-w-screen-lg py-20">
+  <h2 class="mb-12 text-center text-3xl font-bold leading-5 text-white">
+    {hero}
+  </h2>
 
-<section class="flex flex-col w-[100%] items-center justify-center px-6 py-10 gap-10">
-
-    <h1 class="text-3xl text-[#FFFFFF] font-bold leading-5">{data.titulo}</h1>
-
-    <div class="w-[100%] xl:w-[1086px] min-h-[618px]  gap-[64px] flex flex-wrap justify-center">
-        {
-            data.items.map(data => 
-                <Card 
-                title={data.title}
-                text={data.text}
-                variant={data.variant}
-                />
-            )
-        }
-    </div>
-
-
+  <div class="flex flex-wrap justify-center gap-8">
+    {items.map((d: { title: string; text: string }) => <Card {...d} />)}
+  </div>
 </section>
-
-<style>
-*{
-    font-family: 'Space Grotesk Variable', sans-serif;
-}
-
-
-</style>
