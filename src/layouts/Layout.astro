@@ -3,8 +3,6 @@ import '@fontsource/sora'
 import MetaTags from '@/components/MetaTags.astro'
 import Footer from '@/components/Footer.astro'
 import Navbar from '@/components/Navbar.astro'
-import Users from '@/components/Users.astro'
-import FAQ from '@/components/FAQ.astro'
 
 const {
   title = '¡Únete a la Comunidad Punto&Coma en Discord y Potencia Tu Carrera en IT!',
@@ -20,20 +18,39 @@ const {
     <MetaTags {...{ title, description, img, url }} />
   </head>
 
-  <body
-    class="flex min-h-screen flex-col gap-20 bg-black-dark bg-gradient-to-b from-violet/20 to-violet/0 font-serif md:gap-40"
-  >
-    <div class="fixed -z-10 flex w-full justify-between">
+  <body class="bg-black-dark bg-gradient-to-b from-violet/20 to-violet/0">
+    <div
+      class="pointer-events-none absolute -z-50 flex w-full justify-between blur-sm lg:blur-none"
+    >
       <img src="./hero.svg" />
-      <img src="./hero.svg" class="hidden -scale-x-100 md:block lg:block" />
+      <img src="./hero.svg" class="hidden -scale-x-100 md:block" />
     </div>
 
     <Navbar />
-    <slot />
-
+    <div class="container mx-auto w-11/12 max-w-screen-lg">
+      <main class="flex flex-col items-center gap-20">
+        <slot />
+      </main>
+    </div>
     <Footer />
 
     <style is:global>
+      body {
+        @apply min-h-screen overflow-x-hidden font-serif;
+      }
+
+      .paragraph {
+        @apply max-w-prose text-xl leading-8 text-white-100 md:text-center;
+      }
+
+      .subtitle {
+        @apply relative mx-auto my-10 flex w-fit items-center text-2xl font-bold text-white md:text-4xl;
+      }
+      .subtitle::before {
+        content: '#';
+        @apply invisible absolute -left-6 text-base hover:visible;
+      }
+
       /* If you won't text to be violet instead use bold tag (<b>) */
       strong {
         @apply text-violet;

@@ -2,29 +2,31 @@
 import Button from '@/components/Button.astro'
 ---
 
-<section class="flex items-center justify-center">
-  <div class="flex flex-col items-center text-center">
-    <span class="text-sm text-white md:text-base xl:text-lg"
-      >Aprende haciendo. Crea conociendo.</span
-    >
-    <h2 class="mb-4 mt-8 text-xl text-white md:text-4xl xl:text-5xl">
-      Más que un código, creamos
-    </h2>
-    <h3 class="mb-8 text-2xl font-bold text-violet md:text-5xl xl:text-6xl">
-      conexiones significativas
-    </h3>
-    <span class="mb-8 px-4 text-base text-white xl:text-lg"
-      >En Punto&Coma somos personas del mundo it, trabajando en conjunto para
-      proyectos open source.</span
-    >
+<section
+  class:list={['flex h-svh flex-col justify-center gap-8', Astro.props.class]}
+>
+  <div class="max-w-prose space-y-8 text-center text-white">
+    <span class="text-sm sm:text-base md:text-lg">
+      Aprende haciendo. Crea conociendo.
+    </span>
 
-    <Button
-      class="btn-primary"
-      aria-label="Unite a la comunidad de Punto y Coma"
-      href="https://discord.gg/92E4Xauv"
-      icon="./discord.svg"
-    >
-      Unite a la comunidad
-    </Button>
+    <h2 class="text-3xl font-bold sm:text-4xl md:text-5xl md:leading-tight">
+      Más que un código, creamos
+      <strong>conexiones significativas</strong>
+    </h2>
+
+    <p class="px-4 text-base text-white-100 md:text-lg">
+      En Punto&Coma somos personas del mundo it, trabajando en conjunto en
+      proyectos open source.
+    </p>
   </div>
+
+  <Button
+    class="btn-primary mx-auto"
+    aria-label="Unite a la comunidad de Punto y Coma"
+    href="https://discord.gg/92E4Xauv"
+    icon="./discord.svg"
+  >
+    Unite a la comunidad
+  </Button>
 </section>

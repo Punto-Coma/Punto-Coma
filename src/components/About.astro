@@ -1,9 +1,10 @@
-<section
-  class="mx-auto flex w-5/6 max-w-5xl flex-col items-center gap-8 lg:w-full"
->
-  <span class="text-sm font-medium text-white"> # </span>
-  <h1 class="text-2xl font-bold text-white md:text-4xl">¿Qué es Punto&Coma?</h1>
-  <p class="text-center text-xl font-light text-white-100">
+---
+import Button from './Button.astro'
+---
+
+<section>
+  <h2 class="subtitle">¿Qué es Punto&Coma?</h2>
+  <p class="paragraph">
     Este es un proyecto open source con el objetivo de crear una comunidad. Más
     que una marca, Punto&Coma busca hacer referencia a una familia, una familia
     de programadores, diseñadores y aficionados a la informática y la web
@@ -11,9 +12,10 @@
     expertos de todo Latam para generar un ambiente variado y rico en
     colaboración significativa.
   </p>
-  <button
-    class="button rounded-4xl bg-violet px-4 py-3 text-base font-normal text-black-dark transition duration-300 ease-out hover:bg-violet/90"
+  <Button
+    aria-label="Nuestros objetivos"
+    class="btn-primary mx-auto mt-10 w-fit"
   >
     Nuestros Objetivos
-  </button>
+  </Button>
 </section>

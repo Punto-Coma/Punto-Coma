@@ -10,40 +10,10 @@ interface FAQ {
   question: string
   answer: string | string[]
 }
-
-// TODO: Add more questions and answers
-const content: FAQ[] = [
-  {
-    question: '¿Qué es Punto&Coma?',
-    answer:
-      'Punto&Coma es una <strong>comunidad de desarrolladores</strong> dedicada a trabajar en <strong>proyectos open source</strong>, con el objetivo de contribuir y beneficiar a la comunidad en general.'
-  },
-  {
-    question: '¿Qué tipo de proyectos se desarrollan?',
-    answer:
-      'Nos enfocamos en proyectos de <strong>código abierto</strong> que cubren diversas áreas, desde el <strong>desarrollo software</strong> hasta <strong>herramientas y recursos</strong> para la comunidad de desarrolladores. Siempre estamos abiertos a nuevas ideas y colaboradores.'
-  },
-  {
-    question: '¿Cómo puedo contribuir en los proyectos?',
-    answer: [
-      'Contribuir es fácil. Simplemente busca un proyecto que te interese en el canal <strong>open source</strong> y escribí para ver cómo puedes ayudar.',
-      'Puedes contribuir con <strong>código</strong>, <strong>reportando problemas</strong> o incluso <strong>compartiendo</strong> el proyecto entre otros desarrolladores.'
-    ]
-  },
-  {
-    question: '¿Hay requisitos para unirse?',
-    answer: [
-      'No hay requisitos para unirte, aparte de tener interés en el <strong>desarrollo de software</strong> y deseo de colaborar en <strong>proyectos de código abierto</strong>.',
-      '¡Todos son bienvenidos, independientemente de su nivel de experiencia o habilidades técnicas!'
-    ]
-  }
-]
 ---
 
-<section class="mx-auto w-11/12 max-w-2xl">
-  <h2
-    class="mb-4 text-center text-2xl font-semibold text-white md:mb-8 md:text-4xl"
-  >
+<section class:list={['mx-auto w-11/12 max-w-2xl', Astro.props.class as Props]}>
+  <h2 class="subtitle mb-4">
     {title}
   </h2>
   <ul class="flex flex-col">
