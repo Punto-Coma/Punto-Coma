@@ -1,20 +1,24 @@
 ---
-import MarqueeUser from "./MarqueeUser.astro";
-import users from '@/data/users.json';
+import MarqueeUser from './MarqueeUser.astro'
+import users from '@/data/users.json'
 
 let shuffled = users
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
+  .map((value) => ({ value, sort: Math.random() }))
+  .sort((a, b) => a.sort - b.sort)
+  .map(({ value }) => value)
 ---
 
-<div class="flex flex-row items-center">
-    <div class="absolute w-full text-center z-30">
-        <span class="font-bold text-center align-middle text-white xl:text-5xl text-3xl drop-shadow-violet shadow-violet">+1700 usuarios</span>
-    </div>
-    <div class="brightness-[.3] w-full">
-        <MarqueeUser client:load users={users} />
-        <MarqueeUser client:load reverse={true} users={users} />
-        <MarqueeUser client:load users={shuffled} />
-    </div>
+<div class="relative flex flex-row items-center">
+  <div class="absolute z-30 w-full text-center">
+    <span
+      class="text-center align-middle text-3xl font-bold text-white shadow-violet drop-shadow-violet xl:text-5xl"
+    >
+      +1700 miembros
+    </span>
+  </div>
+  <div class="w-full brightness-[.3]">
+    <MarqueeUser users={users} />
+    <MarqueeUser reverse={true} users={users} />
+    <MarqueeUser users={shuffled} />
+  </div>
 </div>
