@@ -1,17 +1,22 @@
 ---
 interface Props {
   href?: string | URL
+  target?: string
   icon?: string
   class?: string
   'aria-label': string
 }
 
-const { href, icon, 'aria-label': ariaLabel } = Astro.props as Props
+const {
+  href,
+  target = '_blank',
+  icon,
+  'aria-label': ariaLabel
+} = Astro.props as Props
 ---
 
 <a
-  {href}
-  target="_blank"
+  {...{ href, target }}
   aria-label={ariaLabel}
   class:list={[
     'flex items-center justify-center gap-2 rounded-3xl px-4 py-3 outline-none transition-colors focus:outline-violet/40 sm:px-6',
