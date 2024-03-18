@@ -5,6 +5,6 @@ const { img, username } = Astro.props
 <div
   class="flex items-center justify-center gap-4 rounded-2xl border border-white px-4 py-2"
 >
-  <img src={img} alt="username-pfp" class="w-8 rounded-full" />
+  <img src={img} alt="username-pfp" class="w-8 rounded-full" onerror="this.onerror=null;this.src='/placeholder-user.jpg'"/>
   <span class="font-bold text-white">{username}</span>
 </div>
